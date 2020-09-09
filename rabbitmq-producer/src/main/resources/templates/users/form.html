@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf in action</title>
+</head>
+<body>
+<div th:replace="~{fragments/header::header}"></div>
+<h3 th:text="${userModel.title}"></h3>
+<form action="/users" th:action="@{/users}" method="POST" th:object="${userModel.user}">
+    <input type="hidden" name="id" th:value="*{id}">
+    姓名：<br>
+    <input type="text" name="name" th:value="*{name}">
+    <br>
+    年龄：<br>
+    <input type="text" name="age" th:value="*{age}">
+    <br>
+    性别：<br>
+    <input type="text" name="sex" th:value="*{sex}">
+    <br>
+    身高：<br>
+    <input type="text" name="height" th:value="*{height}">
+    <br>
+    简介：<br>
+    <input type="text" name="memo" th:value="*{memo}">
+    <input type="submit" value="提交" >
+</form>
+<div th:replace="~{fragments/footer::footer}"></div>
+</body>
+</html>

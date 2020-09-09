@@ -1,0 +1,1 @@
+package sin.cloud.rabbitmqconsumer.mq;

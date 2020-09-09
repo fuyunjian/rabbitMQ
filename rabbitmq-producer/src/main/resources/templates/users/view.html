@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf in action</title>
+</head>
+<body>
+<div th:replace="~{fragments/header::header}"></div>
+<h3 th:text="${userModel.title}"></h3>
+<div>
+    <p><strong>ID:</strong><span th:text="${userModel.user.id}"></span></p>
+    <p><strong>Name:</strong><span th:text="${userModel.user.name}"></span></p>
+    <p><strong>Age:</strong><span th:text="${userModel.user.age}"></span></p>
+    <p><strong>Sex:</strong><span th:text="${userModel.user.sex}"></span></p>
+    <p><strong>Height:</strong><span th:text="${userModel.user.height}"></span></p>
+    <p><strong>Memo:</strong><span th:text="${userModel.user.memo}"></span></p>
+</div>
+<div th:replace="~{fragments/footer::footer}"></div>
+</body>
+</html>
